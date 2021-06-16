@@ -1,3 +1,35 @@
+.card-body{
+    
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 120px;
+    padding-left: 80px;
+    padding-right: 600px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.locimg{
+    margin-left: 75px;
+    margin-top: 50px;
+
+}
+
+.col-md-8{
+
+    margin-left: 0%;
+
+
+}
+.card-body2{
+
+    margin-right: 75px;
+    margin-top: 50px;
+    margin-left: 0%;
+    padding-left: 0%;
+
+}
+
+
 .card-title{
 
     padding-bottom: 10px;
@@ -6,6 +38,14 @@
 
 .btn {
 
-    margin-top: 10px;
+    margin-top: 25px;
+
+}
+
+.alert{
+
+    margin-left: 75px;
+    margin-top: 50px;
+    margin-right: 75px;
 
 }

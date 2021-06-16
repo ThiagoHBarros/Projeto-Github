@@ -1,5 +1,39 @@
+
 <div class="card-body" style="background-color: #e3f2fd;">
     <h2 class="card-title">Encontre um perfil no Github</h2>
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <a href="#" class="btn btn-primary">Encontrar</a>
+     <input type="text" name="search" id="search"  class="form-control"  placeholder="Usuário Github" #busca #user>
+     <a class="btn btn-primary" (click)="getInformacoes(busca.value)"> Pesquisar</a>
   </div>
+
+ 
+<div *ngIf="Encontrou">   
+    <div class="row g-0" >
+      <div class="col-md-4">
+        <img class="locimg" src="{{info.avatar_url}}" alt="..." width="390px" height="300px" >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body2" style="background-color: #e3f2fd;">
+            <span>Repositórios: {{info.public_repos}} | </span>
+            <span>Seguidores: {{info.followers}}  | </span>
+            <span>Seguindo: {{info.following}}  </span> 
+            <br>
+          <h5 class="card-title">Informações</h5>
+          <p class="card-text">
+            <b>
+            <p>Empresa: {{info.company}}</p>
+            <p>Website/Blog: {{info.blog}}</p>
+            <p>Localização: {{info.location}}</p>
+            <p>Membro desde: {{info.created_at | date: "dd/MM/yyyy"}}</p>
+        </b>
+          <a class="btn btn-primary" href="https://github.com/glaucotodesco">Ver Perfil</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div *ngIf="NEncontrou">
+    <div class="alert alert-dark" role="alert">
+        <h4>Não encontrado!</h4>
+    </div>
+</div>
+
